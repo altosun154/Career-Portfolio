@@ -3,23 +3,281 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
+        <title>Michael Wei | Information Science Student and Full-Stack Developer</title>
+
+        <!-- Summary shown by search engines under the page title -->
+        <meta name="description" content="Portfolio of Michael Wei, an Information Science student at Michigan State University who builds full-stack web apps and researches how people talk to AI.">
+        <meta name="author" content="Michael Wei">
+        <meta name="keywords" content="Michael Wei, portfolio, Information Science, Michigan State University, full-stack developer, Python, Flask, JavaScript, research">
+        <!-- Lets the browser use its own light or dark theme, no CSS needed -->
+        <meta name="color-scheme" content="light dark">
+        <meta name="theme-color" content="#18453b">
+
+        <!-- Open Graph tags control the preview card when the link is shared -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Michael Wei | Portfolio">
+        <meta property="og:description" content="Information Science student at Michigan State University. I build full-stack web apps and research how people talk to AI.">
+        <meta property="og:locale" content="en_US">
     </head>
     <body>
-        <h1>Welcome to My Portfolio</h1>
-        <img src="profile.jpg" alt="Profile Picture" width="200">
-        <p>This is a showcase of my work and projects.</p>
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="project1.html">Project 1</a></li>
-                <li><a href="project2.html">Project 2</a></li>
-                <li><a href="project3.html">Project 3</a></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Contact</h2>
+        <a href="#main">Skip to main content</a>
 
+        <header id="top">
+            <p><strong>Michael Wei</strong> <small>builds for people, then checks the data</small></p>
 
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#toolkit">Toolkit</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <!-- Hero / intro -->
+            <section id="intro" aria-labelledby="intro-heading">
+                <h1 id="intro-heading">Hi, I'm Michael. I build software for the people who actually have to use it.</h1>
+                <p>I'm an Information Science student at <a href="https://msu.edu/">Michigan State University</a>. Right now I'm a Software Development Intern at <abbr title="Technical Consulting &amp; Research, Inc.">TCR</abbr>, the lead developer on a Digital SAT practice platform built for a real test-prep center, and a researcher studying how people talk to AI when they're stressed.</p>
+                <p><strong>Open to software and research roles.</strong></p>
+                <p><a href="#projects">See what I've built</a> or <a href="#contact">say hi</a>.</p>
+            </section>
+
+            <!-- About -->
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About me</h2>
+
+                <figure>
+                    <img src="images/profile.jpg" alt="Michael Wei smiling in a black track jacket, leaning against a tree" width="320" height="400">
+                    <figcaption>Me, outside and away from a keyboard for once.</figcaption>
+                </figure>
+
+                <p>My first real job had nothing to do with code. From 2021 to 2025 I was an instructor at Kumon in Ann Arbor, helping rooms of 10 to 25 kids through math and reading worksheets. Four years of that teaches you one thing very well: if someone is stuck, it's usually because of how the problem was explained, not because of them.</p>
+                <p>I carried that into software. I study Information Science in MSU's College of Communication Arts and Sciences, which means I learn technology from the people side first. I like the kind of projects where there is someone on the other end with a job to do: an instructor who needs to see where a student is struggling, a tenant trying to understand a lease, or a group of friends who just want to know who's actually the best at Smash.</p>
+                <p>I also split my time with research, and I think it makes me a better developer. Reading interview transcripts for hours is slow work, but it's the fastest way I know to find out what people really mean, which is rarely what they say first. I've worked in labs on medical imaging AI, on how students in India and the United States connect entertainment media and mental health, and on whether young adults talk about stress differently with a person than with a chatbot.</p>
+                <p>My outlook on this career is simple: <em>the code is the easy part</em>. The hard part is figuring out what the person needs and then being honest about whether what you built actually does it. That's why I care about testing things against real data instead of just shipping a demo.</p>
+
+                <h3>Quick facts</h3>
+                <dl>
+                    <dt>Based in</dt>
+                    <dd>East Lansing, Michigan (originally from Ann Arbor)</dd>
+                    <dt>Studying</dt>
+                    <dd>Information Science at Michigan State University, class of 2027</dd>
+                    <dt>Languages</dt>
+                    <dd>English and conversational Chinese</dd>
+                    <dt>Off the clock</dt>
+                    <dd>Watching <a href="https://100thieves.com/">100 Thieves</a> matches, Smash Bros with friends, robotics side projects, and reading</dd>
+                </dl>
+            </section>
+
+            <!-- Education -->
+            <section id="education" aria-labelledby="education-heading">
+                <h2 id="education-heading">Education</h2>
+                <dl>
+                    <dt>Michigan State University, East Lansing, Michigan</dt>
+                    <dd>B.S. Information Science, College of Communication Arts and Sciences — started <time datetime="2023-08">August 2023</time>, expected <time datetime="2027">2027</time></dd>
+                    <dt>Community High School, Ann Arbor, Michigan</dt>
+                    <dd>Graduated <time datetime="2023-05">May 2023</time></dd>
+                </dl>
+                <h3>Honors</h3>
+                <ul>
+                    <li>Greenburg Center Scholarship, <time datetime="2023-08">August 2023</time></li>
+                </ul>
+            </section>
+
+            <!-- Projects showcase -->
+            <section id="projects" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
+                <p>Three things I've built. Each one started with a specific person or group who needed it.</p>
+
+                <article aria-labelledby="project-sat">
+                    <h3 id="project-sat">Digital SAT Practice Platform</h3>
+                    <p>A mock Digital SAT that looks and behaves like the real exam, built for Triumph Training Center, a Michigan test-prep center. Students take full practice tests, and instructors get analytics showing where each student is losing points.</p>
+                    <dl>
+                        <dt>My role</dt>
+                        <dd>Lead developer on a three-person team through the Claude AI Club at MSU</dd>
+                        <dt>Timeline</dt>
+                        <dd><time datetime="2026-02">February 2026</time> to present</dd>
+                        <dt>Built with</dt>
+                        <dd>Python, Flask, HTML, CSS, JavaScript, Supabase PostgreSQL for the database, backend and frontend both deployed on Render</dd>
+                    </dl>
+                    <h4>What it does</h4>
+                    <ul>
+                        <li>Adapts like the real test: everyone gets the same first module, then the backend grades it and routes the student to a harder or easier second module.</li>
+                        <li>Scores tests on the 200 to 800 scale using item response theory, so a score reflects which questions you got right and not only how many.</li>
+                        <li>Gives students, instructors, and parents different views through role-based access control.</li>
+                    </ul>
+                    <h4>What I learned</h4>
+                    <ul>
+                        <li>It's hard to work virtually with a group of people when not everyone has the same goal.</li>
+                        <li>Keeping the adaptive rules in plain Python, separate from the database, made them easy to test and easy to explain to the client.</li>
+                        <li>Having a real client changes everything. "Done" means the instructor can use it on Monday, not that it works on my laptop.</li>
+                    </ul>
+                    <p>Code: <a href="https://github.com/altosun154/SAT-Backend">backend on GitHub</a> and <a href="https://github.com/altosun154/SAT-Frontend">frontend on GitHub</a>.</p>
+                </article>
+
+                <article aria-labelledby="project-smash">
+                    <h3 id="project-smash">Smashbros</h3>
+                    <p>A for-fun project to play one-v-one tournaments with friends. It runs brackets and live character drafts, and keeps a rating for every player and every character they play.</p>
+                    <figure>
+                        <img src="images/portfolio-login.png" alt="Smashbros login screen, listing player profiles kai, leap, rith, and vyro plus an option to add a new player" width="1440" height="900" loading="lazy">
+                        <figcaption>The current login screen, where everyone in our group picks their profile before a game night.</figcaption>
+                    </figure>
+                    <dl>
+                        <dt>My role</dt>
+                        <dd>Solo developer</dd>
+                        <dt>Timeline</dt>
+                        <dd><time datetime="2026-03">March 2026</time> to present, more than 300 commits so far</dd>
+                        <dt>Built with</dt>
+                        <dd>Python, FastAPI, SQLAlchemy, PostgreSQL on Supabase, Next.js, React, WebSockets</dd>
+                    </dl>
+                    <h4>What I learned</h4>
+                    <ul>
+                        <li>It takes way more code and time to get something to look and work like I envision it.</li>
+                        <li>I rewrote all 14 pages of the original plain HTML and JavaScript frontend in React, checking each new page side by side with the old one. Slow, but nothing broke for the people using it.</li>
+                        <li>Live features like the draft room need WebSockets, and they fail in more interesting ways than a normal page load.</li>
+                    </ul>
+                    <p><a href="https://bracket-self.vercel.app">Visit the live site</a> or <a href="https://github.com/altosun155-kai/Smahbros">read the code on GitHub</a>.</p>
+                </article>
+
+                <article aria-labelledby="project-100t">
+                    <h3 id="project-100t">100 Thieves Esports Tracker</h3>
+                    <p>100 Thieves is my favorite esports organization, and following all of their teams meant checking a different site for each game. So I built one page that tracks every roster: Call of Duty, Counter-Strike, Marvel Rivals, Rainbow Six, and Valorant.</p>
+                    <figure>
+                        <img src="images/100t-tracker-desktop.png" alt="100 Thieves Esports Tracker match feed, filtered by game, showing a live Rainbow Six match and a queue of upcoming CS2 matches with countdowns" width="1440" height="900" loading="lazy">
+                        <figcaption>The match feed, filterable by game, with a live match and a countdown to everything coming up next.</figcaption>
+                    </figure>
+                    <dl>
+                        <dt>My role</dt>
+                        <dd>Solo developer</dd>
+                        <dt>Timeline</dt>
+                        <dd><time datetime="2026-06">June 2026</time> to present</dd>
+                        <dt>Built with</dt>
+                        <dd>JavaScript, HTML, CSS, serverless functions on Vercel, Cheerio for scraping</dd>
+                    </dl>
+                    <h4>What it does</h4>
+                    <ul>
+                        <li>Shows a single match feed with results, upcoming matches, and each team's record.</li>
+                        <li>Opens a preview for any match with both rosters side by side.</li>
+                        <li>Sends browser notifications 30, 10, and 5 minutes before a match and again when it goes live.</li>
+                    </ul>
+                    <h4>What I learned</h4>
+                    <ul>
+                        <li>When your data comes from scraping someone else's site, you don't control your most important dependency. I had to build every request to expect failure.</li>
+                        <li>One rate-limited request used to take down the whole page. Switching to <code>Promise.allSettled</code> means one team's data can fail while the rest still load.</li>
+                        <li>An empty result is better than a crash.</li>
+                    </ul> 
+                    <p><a href="https://100thieves-esportstracker.vercel.app">Visit the live tracker</a>.</p>
+                </article>
+
+                <details>
+                    <summary>Earlier projects</summary>
+                    <ul>
+                        <li><strong>Conversational chatbot:</strong> a speech-based AI chatbot that listens to your voice and answers out loud.</li>
+                        <li><strong>First-person shooter:</strong> a zombie survival game where you collect ammo, reload at the right moment, and hold out against waves that keep getting harder.</li>
+                        <li><strong>Battleship:</strong> a two-player version with a live board that marks hits, misses, and sunk ships as you play.</li>
+                    </ul>
+                </details>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
+                <table>
+                    <caption>Work and research experience, most recent first</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Role</th>
+                            <th scope="col">Where</th>
+                            <th scope="col">When</th>
+                            <th scope="col">What I did</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Software Development Intern</th>
+                            <td>Technical Consulting &amp; Research, Inc. (remote)</td>
+                            <td><time datetime="2026">2026</time> to present</td>
+                            <td>Build prototype web apps for access control, single sign-on, and role-based user management, and present progress weekly to the CEO and head of engineering.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Software Developer</th>
+                            <td>Claude AI Club, Michigan State University</td>
+                            <td><time datetime="2026-02">Feb 2026</time> to present</td>
+                            <td>Lead full-stack development of the Digital SAT practice platform for Triumph Training Center.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Researcher</th>
+                            <td>Marple Lab, Michigan State University</td>
+                            <td><time datetime="2026-05">May 2026</time> to present</td>
+                            <td>Clean and analyze interview transcripts from students in India and the United States on entertainment media and mental health. Co-author on a forthcoming article.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Researcher</th>
+                            <td>Campos-Castillo Lab, Michigan State University</td>
+                            <td><time datetime="2026-05">May</time> to <time datetime="2026-08">Aug 2026</time></td>
+                            <td>Helped run lab sessions and analyze transcripts comparing how young adults talk about stress with a person versus an AI chatbot.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Research Assistant</th>
+                            <td>CAD-AI Research Lab, University of Michigan</td>
+                            <td><time datetime="2025-07">July 2025</time> to <time datetime="2026">2026</time></td>
+                            <td>Cleaned imaging datasets with pandas and worked on the backend of a browser-based tool for radiomic analysis in cancer research.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Data and Finance Intern</th>
+                            <td>College of Human Medicine, Michigan State University</td>
+                            <td><time datetime="2025-06">June</time> to <time datetime="2025-08">Aug 2025</time></td>
+                            <td>Tracked more than $8,000 in student research funding and automated survey reporting with Python and the Qualtrics API.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Instructor</th>
+                            <td>Kumon, Ann Arbor</td>
+                            <td><time datetime="2021-05">May 2021</time> to <time datetime="2025-07">July 2025</time></td>
+                            <td>Helped groups of 10 to 25 students with math and reading.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Toolkit -->
+            <section id="toolkit" aria-labelledby="toolkit-heading">
+                <h2 id="toolkit-heading">Toolkit</h2>
+                <dl>
+                    <dt>Languages</dt>
+                    <dd>Python, JavaScript, C++, SQL</dd>
+                    <dt>Web and backend</dt>
+                    <dd>HTML, CSS, Flask, FastAPI, React, Next.js, PostgreSQL</dd>
+                    <dt>Tools and platforms</dt>
+                    <dd>Git, Supabase, Render, Vercel, Qualtrics API</dd>
+                    <dt>Research</dt>
+                    <dd>Qualitative transcript analysis, thematic coding, data cleaning with pandas</dd>
+                    <dt>Certificate</dt>
+                    <dd>Introduction to Artificial Intelligence, IBM on Coursera (2025)</dd>
+                </dl>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact</h2>
+                <p>I'm open to software and research roles, and I'm always happy to talk about a project, a paper, or last night's match. Email is the fastest way to reach me.</p>
+                <address>
+                    <ul>
+                        <li>Email: <a href="mailto:weimicha@msu.edu">weimicha@msu.edu</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/michael-wei-computer-science" rel="me">michael-wei-computer-science</a></li>
+                        <li>GitHub: <a href="https://github.com/altosun154" rel="me">altosun154</a></li>
+                    </ul>
+                </address>
+            </section>
+        </main>
+
+        <footer>
+            <p><small>&copy; <time datetime="2026">2026</time> Michael Wei. Written in plain semantic HTML. Styling comes later.</small></p>
+            <p><a href="#top">Back to top</a></p>
+        </footer>
     </body>
 </html>

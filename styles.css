@@ -229,14 +229,51 @@ dd {
 
 /* ---------------------------------------------------------------------
    8. Project cards (article elements)
+
+   AI-authored section (Claude, in Claude Code).
+
+   Prompt given: "Make the Projects section use CSS Grid as a
+   two-dimensional layout: one column on mobile, two columns from
+   tablet width up (~768px), with the intro paragraph and the
+   'Earlier projects' details box spanning the full width above and
+   below the project cards. Don't modify the HTML — style the
+   existing #projects section and its direct children only."
+
+   Output: #projects becomes a grid container with a single 1fr
+   column by default (mobile-first). #projects > h2, > p, and
+   > details use grid-column: 1 / -1 so they span every column
+   instead of becoming grid cells themselves. At 768px the grid
+   switches to two equal columns via grid-template-columns, so the
+   three <article> project cards flow two-up, and #projects widens
+   from the shared 760px section max-width so the two columns have
+   room to breathe. article's old margin-bottom is dropped in favor
+   of the grid's own gap.
 ----------------------------------------------------------------------*/
+#projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+#projects > h2,
+#projects > p,
+#projects > details {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 960px;
+  }
+}
+
 article {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 2rem;
-  margin-bottom: 2.5rem;
 }
 
 article h3 {

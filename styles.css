@@ -346,7 +346,7 @@ details {
 summary {
   font-weight: 700;
   cursor: pointer;
-  color: var(--color-link);
+  color: var(--color-strong);
 }
 
 /* ---------------------------------------------------------------------

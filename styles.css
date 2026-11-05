@@ -16,7 +16,7 @@
   --color-ink: #04080f;
   --color-ink-soft: #2a4266;
   --color-accent: #507dbc;
-  --color-link: #456ba2;
+  --color-link: #3d6091;
   --color-accent-soft: #bbd1ea;
   --color-border: #a1c6ea;
   --color-strong: #04080f;
@@ -155,6 +155,7 @@ header#top nav a {
 
 header#top nav a:hover {
   background: var(--color-accent-soft);
+  color: var(--color-strong);
   transform: translateY(-1px);
 }
 

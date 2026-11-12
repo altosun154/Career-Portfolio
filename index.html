@@ -23,12 +23,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <!-- Runs immediately (no defer) so the right theme is set before first paint -->
+        <script src="theme.js"></script>
     </head>
     <body>
         <a href="#main" id="skip-link">Skip to main content</a>
 
         <header id="top">
             <p><strong>Michael Wei</strong> <small>builds for people, then checks the data</small></p>
+
+            <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+                <span id="theme-dot" aria-hidden="true"></span>
+                <span id="theme-label">Light</span>
+            </button>
 
             <nav aria-label="Primary">
                 <ul>
@@ -279,5 +286,9 @@
                 </address>
             </section>
         </main>
+
+        <!-- Third-party library: ScrollReveal, for the scroll-in animation in reveal.js -->
+        <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+        <script src="reveal.js"></script>
     </body>
 </html>
